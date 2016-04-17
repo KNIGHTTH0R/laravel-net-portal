@@ -20,7 +20,7 @@ class TasksController extends Controller
      */
     public function __construct()
     {
-        // We want users to log-in to see this page
+        // Require authentication on our tasks page
         $this->middleware('auth');
     }
 

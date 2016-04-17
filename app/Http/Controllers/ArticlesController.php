@@ -3,9 +3,9 @@
 namespace NetPortal\Http\Controllers;
 
 use Auth;
+use Carbon\Carbon;
 use NetPortal\Tag;
 use NetPortal\Article;
-use Carbon\Carbon;
 use NetPortal\Http\Controllers\Controller;
 use NetPortal\Http\Requests\ArticleRequest;
 
@@ -18,7 +18,7 @@ class ArticlesController extends Controller
      */
     public function __construct()
     {
-        // we want authentication to view the articles home page
+        // Require authentication on our articles page
         $this->middleware('auth');
     }
 

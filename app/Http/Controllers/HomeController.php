@@ -14,8 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // only if we want people to login
-        // $this->middleware('auth');
+        // Require authentication on our homepage
+        $this->middleware('auth');
     }
 
     /**
